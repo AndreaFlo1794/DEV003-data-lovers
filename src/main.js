@@ -32,34 +32,7 @@ function drawFilms(filmsArray){               //Funcion cuyo unico fin es PINTAR
 
 
 }
-document.querySelectorAll('.film-container').forEach((items) =>{
-  items.addEventListener("click" , contModal )
-}) 
-// funcion para pintar datos del modal 
 
-const contModal = (ghibli) =>{
-  return `
-  <div class="modal">
-   
-  <div class="modal-header"> Datos extrasss
-    <span id="close-modal"> &times;</span>
-  </div>
-    
-   <div id="modal-info">
- 
-    <div class="modal-content">
- 
-      <h4> Director: ${ghibli.director} </h4> 
-      <h4> Productor: ${ghibli.producer} </h4>
-      <h4> Rating: ${ghibli.rt_score} </h4>
-      <h4> Description: ${ghibli.description} </h4>
-
-    </div>
-  </div>
- 
-</div>
-  `
-}
 
 //Mostrando datos en la interfaz
  drawFilms(getData) 
