@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 * {
     margin: 0;
@@ -6,10 +8,11 @@
 }
 html {
     scroll-behavior: smooth;
-    --primary-color:#b74651;
+    --primary-color:white;
     --container-cards: #d9ec9d;
     --text: #0d4c81;
     --footer: #d4cdc5;
+    --orYfil:#1F7AC1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,17 +38,18 @@ a {
 /* logo */
 .logo img {
     display: flex;
-    width: 100px;
+    width: 170px;
     height: 100px;
     align-items: center;
     position: absolute;
-    margin-left: 120px;
+    margin-left: 110px;
 }
 
 /* navbar */
 .topheader {
     display: flex;
-    background-color: #d6d7efBF;
+    background: rgb(6, 174, 135);
+    background: linear-gradient(90deg, rgb(151,228,191,0.4150035014005602) 0%, rgba(151,228,191,0.4150035014005602) 100%, rgb(74, 240, 176) 100%);
     width: 100%;
     height: auto;
     position: fixed;
@@ -64,18 +68,22 @@ a {
     color: var(--primary-color);
     font-family: 'Ceviche One', cursive;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     letter-spacing: 4px;
     word-spacing: 10px;
     position: relative;
-    margin-left: 100px;
+    margin-left: 240px;
     line-height: 100px;
+    -webkit-text-stroke: 1px ;
+    -webkit-text-stroke-color: #0aa67c;
 }
 
 .menu {
+    
     display: flex;
     list-style: none;
     justify-content: space-around;
+    margin-right: 50px;
     /* quita las viñetas de la lista */
 }
 
@@ -101,19 +109,38 @@ a {
     margin-top: 100px;
     text-align: center;
 }
+.home p{
+    font-family:'Montserrat', sans-serif;
+    font-size: 35px;¨
+    line-height: 1.3px;
+    margin:20px auto;
+    padding: 10px;
+    background: rgb(249, 242, 240);
+    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); 
+}
 
 .home-background {
     margin: 0;
-    background: rgb(22, 223, 126);
-    background: linear-gradient(70deg, rgba(22, 223, 126, 0.2553396358543417) 80%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%); 
+    background-image: url("img/bienvenida1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    bottom: 0;
+    /* height: 150vh; */
+    
+    
+    
 }
 .home-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 45px;
     font-weight: bold;
     margin: 0;
-    color: yellow;
+    color: white;
 }
 
+.totoro{
+   /* margin-top: 190px; */
+}
 /* Sección 2 ordenar films */
 
 .films {
@@ -126,17 +153,18 @@ a {
 .order {
     text-align: center;
     /* background-color: aqua; */
-    color: var(--primary-color);
+    color: white;
     font-size: 25px;
     font-weight: bold;
     padding: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #sortBy {
     font-size: 50%;
     text-align: center;
     background-color: whitesmoke;
-    border: 2px solid red;
+    border: 2px solid #1F7AC1;
     border-radius: 7px;
     width: 10rem;
     height: 2rem;
@@ -152,30 +180,36 @@ a {
     flex-wrap: wrap;
     /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 50px;
 }
 
 .film-container {
-    width: 250px;
+    
+    width: 220px;
+    height: 360px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 red;
+    box-shadow: 0 4px 8px 0 #1F7AC1;
     transition: 0.3s;
     border-radius: 7px;
-    padding: 25px;
+    padding: 20px;
+    margin: 10px;
     background: rgb(151, 228, 191);
     background: linear-gradient(90deg, rgba(151, 228, 191, 0.5914740896358543) 100%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
 .film-container:hover {
-    box-shadow: 0 8px 16px 0 blue;
+    box-shadow: 0 8px 16px 0 #58D68D;
 }
 
 .film-container img {
-    width: 200px;
+    width: 220px;
     border-radius: 7px;
     margin-top: 15px;
     margin-bottom: 15px;
-    height: 300px;
+    height: 290px;
+   
 }
 
 /* Sección 3 Characters */
@@ -190,6 +224,7 @@ footer {
     background: var(--footer);
     text-align: center;
     padding: 10px;
+
     /* ya está posicionado en la parte inferior */
     /* bottom: 0; para que esté abajo del todo, aplica cuando hay poco contenido porque es fijo */
 }
