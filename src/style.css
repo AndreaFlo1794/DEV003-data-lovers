@@ -119,7 +119,7 @@ a {
 .home p{
     font-family:'Montserrat', sans-serif;
     font-size: 35px;
-    line-height: 1.3px;
+    /* line-height: 1.3px; */
     margin: 20px auto;
     padding: 10px;
     background: rgb(249, 242, 240);
@@ -148,6 +148,7 @@ a {
 /* Sección 2 ordenar films */
 
 .films {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-top: 100px;
@@ -195,7 +196,8 @@ a {
     margin-right: 50px; */
 }
 
-.film-container {
+.film-container{
+    position: relative;
     width: 220px;
     height: 360px;
     text-align: center;
@@ -207,18 +209,81 @@ a {
     background: rgb(151, 228, 191);
     background: linear-gradient(90deg, rgba(151, 228, 191, 0.5914740896358543) 100%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
+.film-container .face{
+    position: absolute;
+    width: 220px;
+    height: 360px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.film-container .front{
+    transform: perspective(600px)rotateY(0deg);
+    box-shadow: 0 5px 10px rgba(0,0,0,2) 6px 20 px 0 rgba(0,0,0,19);
+}
+.film-container h4,h5{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
 
 .film-container:hover {
     box-shadow: 0 8px 16px 0 #58D68D;
 }
 
-.film-container img {
+.film-container .front img {
+    /* position: absolute; */
     width: 220px;
     border-radius: 7px;
     margin-top: 15px;
     margin-bottom: 15px;
     height: 290px;
    
+}
+
+.film-container .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    width: 220px;
+    height: 360px;
+    overflow: scroll;
+
+
+}
+
+
+.film-container .back h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+.film-container .back p {
+    letter-spacing: 1px;
+    font-size: small;
+    margin-top: 15px;
+} 
+
+.film-container:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.film-container:hover .back {
+    transform: perspective(600px) rotateY(360deg);
 }
 
 /* Sección 3 Characters */

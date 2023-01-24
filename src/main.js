@@ -1,5 +1,73 @@
 import data from './data/ghibli/ghibli.js'; //importar datos
-import { orderingBy } from './data.js';
+import { filteringBy, orderingBy } from './data.js';
+
+
+
+//variable donde almacenamos los datos para trabajar más comodamente
+const getData = data.films
+
+
+
+// funcion para pintar datos 
+function drawFilms(filmsArray){               //Funcion cuyo unico fin es PINTAR, DEVOLVER EL HTML DE CADA FILM
+  
+  let containerPicture = document.getElementById('data-container');
+ const picture = filmsArray.map( function(film){ 
+
+     return  `
+    <div class="film-container">
+     <div class="face front">
+      <img src="${film.poster}">
+      <h4> 📆 ${film.release_date} </h4>
+      <h5> ⭐ ${film.rt_score} </h5>
+    </div>
+
+    <div class="face back">
+    <h3> ${film.title}</h3>
+    <p>${film.description}</p>
+
+    </div>
+   </div>     
+    
+
+    ` 
+
+  } ).join('')
+
+  containerPicture.innerHTML = picture
+  
+  console.log(containerPicture.querySelectorAll('.film-container'))
+  return containerPicture
+}
+
+
+//Mostrando datos en la interfaz
+ drawFilms(getData);
+
+
+//ordenando por medio de un select
+// ejecutamos funcion de pintar con los nuevos arreglos
+const drawRating = document.getElementById('sortBy');
+drawRating.addEventListener("change", () =>{ 
+  
+  const release = document.getElementById('release-date').value
+  const score = document.getElementById('score').value
+  const allFilms= document.getElementById("select").value
+  
+
+  if(drawRating.value === score){drawFilms(orderingBy(getData , 'rt_score'))  }
+  if(drawRating.value === release){ drawFilms(orderingBy(getData , 'release_date')) }
+  if(drawRating.value === allFilms){ drawFilms(orderingBy(getData)) }
+  
+})
+
+
+
+// const characters= getData.map(c=>c.people).flat(1);
+
+
+
+// console.log(filteringBy(characters, "specie"));
 
 
 //display para las interfaces
@@ -30,63 +98,3 @@ navCharacters.addEventListener("click", ()=>{
   secFilms.style.display="none";
   secCharacters.style.display="block";
 })
-
-
-
-
-
-
-
-//variable donde almacenamos los datos para trabajar más comodamente
-const getData = data.films
-
-// funcion para pintar datos 
-function drawFilms(filmsArray){               //Funcion cuyo unico fin es PINTAR, DEVOLVER EL HTML DE CADA FILM
-  
-  let containerPicture = document.getElementById('data-container');
- const picture = filmsArray.map( function(film){ 
-
-     return  `
-    <div class="film-container" id= " ${film.id} ">
-     
-      <img src="${film.poster}">
-      <h4> 📆 ${film.release_date} </h4>
-      <h5> ⭐ ${film.rt_score} </h5>
-      
-    </div>
-           
-    ` 
-
-  } ).join('')
-
-  containerPicture.innerHTML = picture
-  
-  console.log(containerPicture.querySelectorAll('.film-container'))
-  return containerPicture
-}
-
-
-//Mostrando datos en la interfaz
- drawFilms(getData) 
-
-//ordenando por medio de un select
-const drawRating = document.getElementById('desplegar-orden')
-const release = document.getElementById('ordenar-fecha').value
-const score = document.getElementById('ordenar-rt').value
-const dataContainerEl = document.getElementById('data-container')
-
-// ejecutamos funcion de pintar con los nuevos arreglos
-
-drawRating.addEventListener("change" , () =>{ 
-  if(drawRating.value === score){dataContainerEl.innerHTML = drawFilms(orderingBy(getData , 'rt_score'))  }
-  if(drawRating.value === release){dataContainerEl.innerHTML = drawFilms(orderingBy(getData , 'release_date')) }
-  if(drawRating.value === ""){dataContainerEl.innerHTML = drawFilms(getData)}
-  
-})
-
-
-
-
-
-
-
