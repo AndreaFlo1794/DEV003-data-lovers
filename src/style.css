@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
     --primary-color:white;
@@ -16,19 +17,15 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section[id] {
-    scroll-margin-top: 110px;
-}
-
 body {
-    background-image: url("img/background1.jpg");
+    /* background-image: url("img/background1.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 100vh;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 a {
@@ -36,13 +33,17 @@ a {
 }
 
 /* logo */
-.logo img {
+.logo{
     display: flex;
+    align-items: center;
+}
+.logo img {
+    /* display: flex; */
     width: 170px;
     height: 100px;
-    align-items: center;
+    /* align-items: center;
     position: absolute;
-    margin-left: 110px;
+    margin-left: 110px; */
 }
 
 /* navbar */
@@ -51,17 +52,19 @@ a {
     background: rgb(6, 174, 135);
     background: linear-gradient(90deg, rgb(151,228,191,0.4150035014005602) 0%, rgba(151,228,191,0.4150035014005602) 100%, rgb(74, 240, 176) 100%);
     width: 100%;
-    height: auto;
+    /* height: auto; */
     position: fixed;
-    justify-content: center;
+    left: 0;
+    top: 0;
+    /* justify-content: center; */
 }
 
 .topnav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between;
     /* separación entre cada opción */
     /* padding: 10px; */
-    width: 100%;
+    /* width: 100%; */ 
 }
 
 #nav-title {
@@ -79,17 +82,21 @@ a {
 }
 
 .menu {
-    
+
     display: flex;
     list-style: none;
     justify-content: space-around;
-    margin-right: 50px;
-    /* quita las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    /* margin-right: 50px; */
+    
+}
+.menu li{
+    padding: 0 15px;;
 }
 
 .menu a {
-    padding: 0 15px;
-    /* primer número: arriba-abago; segundo: derecha-izquierda */
+    /* padding: 0 15px; */
     color: var(--primary-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -97,7 +104,6 @@ a {
     line-height: 100px;
     /* para alinear con respecto a los elementos de mismo contenedor */
     text-transform: uppercase;
-    /* para que la línea se ubique con respecto a cada opción (enlace) */
 }
 
 .menu a:hover {
@@ -107,30 +113,31 @@ a {
 /*Bienvenida a Studio Ghibli*/
 .home {
     margin-top: 100px;
-    text-align: center;
+    text-align: center;  
 }
+
 .home p{
     font-family:'Montserrat', sans-serif;
-    font-size: 35px;¨
+    font-size: 35px;
     line-height: 1.3px;
-    margin:20px auto;
+    margin: 20px auto;
     padding: 10px;
     background: rgb(249, 242, 240);
-    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); 
+    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%);
+    
+    
 }
 
 .home-background {
-    margin: 0;
     background-image: url("img/bienvenida1.jpg");
     background-attachment: fixed;
     background-size: cover;
-    bottom: 0;
+    /* bottom: 0; */
     /* height: 150vh; */
-    
-    
-    
+
 }
-.home-title {
+
+.home-title{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 45px;
     font-weight: bold;
@@ -138,26 +145,28 @@ a {
     color: white;
 }
 
-.totoro{
-   /* margin-top: 190px; */
-}
 /* Sección 2 ordenar films */
 
 .films {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 105px;
+    margin-top: 100px;
     justify-content: center;
+    display: none;
+    background-image: url("img/background1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 .order {
     text-align: center;
     /* background-color: aqua; */
-    color: white;
-    font-size: 25px;
+    color: black;
+    font-size: 23px;
     font-weight: bold;
-    padding: 5px;
+    padding: 50px;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 #sortBy {
@@ -170,6 +179,7 @@ a {
     height: 2rem;
     color: black;
     margin-bottom: 25px;
+    
 }
 
 /* Mostrar la data */
@@ -180,13 +190,12 @@ a {
     flex-wrap: wrap;
     /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
-    justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 50px;
+    justify-content: center;
+    /* margin-left: 30px;
+    margin-right: 50px; */
 }
 
 .film-container {
-    
     width: 220px;
     height: 360px;
     text-align: center;
@@ -217,6 +226,7 @@ a {
 .characters {
     margin-top: 120px;
     color: white;
+    display: none;
 }
 
 /* links para redes sociales */
@@ -224,9 +234,7 @@ footer {
     background: var(--footer);
     text-align: center;
     padding: 10px;
-
-    /* ya está posicionado en la parte inferior */
-    /* bottom: 0; para que esté abajo del todo, aplica cuando hay poco contenido porque es fijo */
+    margin-top: auto;
 }
 
 footer img {
