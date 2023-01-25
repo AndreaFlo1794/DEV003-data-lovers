@@ -1,4 +1,40 @@
 # Data Lovers
+# Data Lovers- Studio Ghibli
+
+### Definición del Producto
+Está página ha sido creada para todos los fans de Studio Ghibli, con la finalidad de que puedan encontrar toda la información relevante acerca de cada uno de los films y personajes, mediante interfaces amigables y de fácil lectura para que la experiencia Ghibli sea más amena.
+
+### Historias de Usuario 
+
+#### H.1 Visualizar la data
+Para esta primera historia de usuario, buscamos poder mostrar la data de los films al usuario, una vez ya graficada en la página, podemos pasar con nuestra segunda historia de usuario.
+
+#### H.2 Ordenar Datos (score)
+En este caso lo que buscamos es, con las cards ya creadas y cada una con rate score, ordenarlas en base a ese item, de esta manera el usuario pueden tener los films de acuerdo a los mejores films puntuados.
+
+##### H.2.1 Ordenar Datos (release date)
+Una vez ya ordenadas por score, también consideramos necesario ordenarlas por año de lanzamiento, de esta manera el usuario podría seleccionar ver quizás la más reciente o más antigua.
+
+### Diseño de la interfaz de Usuario
+
+#### Prototipo de baja fidelidad
+Este prototipo fue diseñado en base a la información brindada por las investigaciones, tomando en cuenta las necesidades del usuario es que decidimos hacer lo siguiente:
+
+![Prototipo de baja](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+
+#### Prototipo de media fidelidad
+Para tener un prototipo más sólido antes de pasar al que se haría en Figma, decidimos mediante un whiteboard, realizar uno de media, quedando de la siguiente manera:
+
+![Prototipo de media](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+
+#### Prototipo de alta fidelidad
+Mediante Figma realizamos el prototipo de alta, ya habiendo elegido un fondo y paleta de posibles colores para nuestra página, añadimos cosas al diseño como tipo de fuente, logo imagenes, y como irian las cards distribuidas, teniendo el siguiente resultado:
+
+![Bienvenidarm](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+![Interfaz Principal](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+
+https://www.figma.com/file/R6S8CLaVrcAAtlGUVjllbi/SG?node-id=0%3A1&t=gZMJv8c5VicvH431-0
+
 
 ## Índice
 
