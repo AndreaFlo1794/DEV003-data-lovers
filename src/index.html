@@ -10,8 +10,9 @@
  </head>
 
  <body>
+  <input type="search" class="search" placeholder="🔍Search... ">
+
   <header class="topheader">
-    <!-- <input type="search" class="search" placeholder="🔍Search... "> -->
     <nav class="topnav">
       <div class="logo">
         <img src="img/totoro-logo.png" alt="logo"/>
@@ -67,14 +68,20 @@
     <!--página que muestra todos los personajes y permite FILTRAR por especie-->
     <section class="characters" id="characters">
       <div class="selector-character">
+        <label>Filter by:</label>
         <select id="filterBy">
-          <option selected>Filter by:</option>
-          <option id="specie" value="specie">Specie</option>
-          <option id="gender" value="gender">Gender</option>
-          <option id="age" value="age">Age</option>
+          <option selected>Gender</option>
+          <option id="Female" value="Female">Female</option>
+          <option id="Male" value="Male">Male</option>
+        </select>
+          <select id="filterBy">
+            <option selected>Specie</option>
+            <option id="Human" value="Human">Human</option>
+            <option id="Animal" value="Animal">Animal</option>
+            <option id="Other" value="Other">Other</option>
         </select>
       </div>
-
+ 
       <div class="showData" id="showData-characters">
         <!--aquí se mostrarán los personajes-->
       </div>

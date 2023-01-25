@@ -68,7 +68,8 @@ function drawFilms(filmsArray) {
 const characters = [];
 getData.forEach(film => {
   film.people.forEach(people => {
-    return characters.push(people);
+    people.film=film.title;
+    return characters.push(people);//variable para añadir la pelicula - desestructuración
   })
 });
 
@@ -76,8 +77,12 @@ function drawCharacters(peopleArray){
   const cardCharacter = peopleArray.map(people => { 
     return  `
 <div class="character-container">
-  <h4> 🍀 ${people.name} </h4>
+  <h4>  ${people.name} </h4>
   <img src="${people.img}">
+  <h4> 📽️ ${people.film} </h4>
+  <h5> ✏️ Age:  ${people.age} </h5>
+  <h5> 👀 Eye-color:  ${people.eye_color} </h5>
+  <h5> 🎩 Hair-color:  ${people.hair_color} </h5>
 </div>
 ` 
   }).join('')
@@ -105,8 +110,3 @@ drawRating.addEventListener("change", () => {
 
 // invocando la función drawCharacters con el argumento characters para ver en interfaz
 drawCharacters(characters)
-
-
-  
-
-
