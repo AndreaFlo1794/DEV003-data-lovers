@@ -20,18 +20,18 @@ Una vez ya ordenadas por score, también consideramos necesario ordenarlas por a
 #### Prototipo de baja fidelidad
 Este prototipo fue diseñado en base a la información brindada por las investigaciones, tomando en cuenta las necesidades del usuario es que decidimos hacer lo siguiente:
 
-https://github.com/AndreaFlo1794/DEV003-data-lovers/blob/main/img/prototipodebaja.jpg
+[![Prototipo-de-baja.jpg](https://i.postimg.cc/CMj4931j/Prototipo-de-baja.jpg)](https://postimg.cc/z3GWgPTB)
 
 #### Prototipo de media fidelidad
 Para tener un prototipo más sólido antes de pasar al que se haría en Figma, decidimos mediante un whiteboard, realizar uno de media, quedando de la siguiente manera:
 
-![Prototipo de media](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+[![Prototipo-de-media.jpg](https://i.postimg.cc/2SXd4mcf/Prototipo-de-media.jpg)](https://postimg.cc/NKmrthvN)
 
 #### Prototipo de alta fidelidad
 Mediante Figma realizamos el prototipo de alta, ya habiendo elegido un fondo y paleta de posibles colores para nuestra página, añadimos cosas al diseño como tipo de fuente, logo imagenes, y como irian las cards distribuidas, teniendo el siguiente resultado:
 
-![Bienvenidarm](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
-![Interfaz Principal](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+[![bienvenidarm.jpg](https://i.postimg.cc/bJ02FjTr/bienvenidarm.jpg)](https://postimg.cc/Q9ttHwvZ)
+[![Interfaz-principal.jpg](https://i.postimg.cc/Rh9wM0Fw/Interfaz-principal.jpg)](https://postimg.cc/XGHrL49v)
 
 https://www.figma.com/file/R6S8CLaVrcAAtlGUVjllbi/SG?node-id=0%3A1&t=gZMJv8c5VicvH431-0
 
