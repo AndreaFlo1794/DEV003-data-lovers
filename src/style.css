@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 100vh;
+   
     /* max-width: 100%; */
 }
 
@@ -49,7 +50,7 @@ a {
 /* navbar */
 .topheader {
     display: flex;
-    background: rgb(6, 174, 135);
+    background-color: rgb(6, 174, 135);
     background: linear-gradient(90deg, rgb(151,228,191,0.4150035014005602) 0%, rgba(151,228,191,0.4150035014005602) 100%, rgb(74, 240, 176) 100%);
     width: 100%;
     /* height: auto; */
@@ -109,7 +110,11 @@ a {
 .menu a:hover {
     color: var(--text);
 }
-
+main{
+    background-color: rgb(6, 174, 135);
+    background: linear-gradient(90deg, rgb(151,228,191,0.4150035014005602) 0%, rgba(151,228,191,0.4150035014005602) 100%, rgb(74, 240, 176) 100%);
+    opacity: 1;
+}
 /*Bienvenida a Studio Ghibli*/
 .home {
     margin-top: 100px;
@@ -205,7 +210,7 @@ a {
     transition: 0.3s;
     border-radius: 7px;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
     background: rgb(151, 228, 191);
     background: linear-gradient(90deg, rgba(151, 228, 191, 0.5914740896358543) 100%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
@@ -223,7 +228,7 @@ a {
     transform: perspective(600px)rotateY(0deg);
     box-shadow: 0 5px 10px rgba(0,0,0,2) 6px 20 px 0 rgba(0,0,0,19);
 }
-.film-container h4,h5{
+.film-container h4 h5{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -251,31 +256,31 @@ a {
 .film-container .back {
     transform: perspective(600px) rotateY(180deg);
     background: rgb(3, 35, 54);
-    padding: 15px;
+    padding: 5px;
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 5px 10px #000;
-    width: 220px;
+    width: 210px;
     height: 360px;
-    overflow: scroll;
-
+    
 
 }
 
-
 .film-container .back h3 {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 15px;
     letter-spacing: 2px;
 }
 
 .film-container .back p {
     letter-spacing: 1px;
-    font-size: small;
-    margin-top: 15px;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 80px;
+   
 } 
 
 .film-container:hover .front {
