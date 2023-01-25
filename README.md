@@ -20,7 +20,7 @@ Una vez ya ordenadas por score, también consideramos necesario ordenarlas por a
 #### Prototipo de baja fidelidad
 Este prototipo fue diseñado en base a la información brindada por las investigaciones, tomando en cuenta las necesidades del usuario es que decidimos hacer lo siguiente:
 
-![Prototipo de baja](C:\Users\Usuario\Desktop\LABORATORIA\DEV003-data-lovers)
+![Prototipo de baja](https://github.com/AndreaFlo1794/DEV003-data-lovers/blob/main/img/prototipo de baja.jpg)
 
 #### Prototipo de media fidelidad
 Para tener un prototipo más sólido antes de pasar al que se haría en Figma, decidimos mediante un whiteboard, realizar uno de media, quedando de la siguiente manera:
