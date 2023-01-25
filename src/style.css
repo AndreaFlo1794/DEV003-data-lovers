@@ -332,7 +332,7 @@ main{
     border-radius: 7px;
     padding: 20px;
     margin: 20px;
-    background: rgba(3, 129, 171, 0.732);
+    background: #eef6f4;
 
 }
 .character-container:hover {
@@ -344,10 +344,17 @@ main{
     max-width: 150px;
 
 }
-.character-container h4, h5{
+
+.character-container h4{
+    padding: 1px;
+    font-size: 16px;
+    color: #b74651;
+    text-align: center;
+}
+.character-container h5{
     padding: 1px;
     font-size: 15px;
-    color: whitesmoke;
+    color: #104e73;
     text-align: center;
 }
 .selector-character {

@@ -40,7 +40,10 @@ const allFilms = document.getElementById("select").value
 const score = document.getElementById('score').value
 const release = document.getElementById('release-date').value
 const cardsCharactersEl= document.getElementById('showData-characters');
-
+const drawFilter= document.getElementById("filterBy");
+const selectFilter=document.getElementById("select-filter").value;
+const female= document.getElementById("female").value;
+const male= document.getElementById("male").value;
 
 // funcion para pintar datos (template) con el fin de que aparezcan en interfaz con innerHTML
 function drawFilms(filmsArray) {
@@ -68,7 +71,7 @@ function drawFilms(filmsArray) {
 const characters = [];
 getData.forEach(film => {
   film.people.forEach(people => {
-    people.film=film.title;
+    people.movie=film.title;
     return characters.push(people);//variable para añadir la pelicula - desestructuración
   })
 });
@@ -79,7 +82,7 @@ function drawCharacters(peopleArray){
 <div class="character-container">
   <h4>  ${people.name} </h4>
   <img src="${people.img}">
-  <h4> 📽️ ${people.film} </h4>
+  <h5> 🎞️ ${people.movie}</h5>
   <h5> ✏️ Age:  ${people.age} </h5>
   <h5> 👀 Eye-color:  ${people.eye_color} </h5>
   <h5> 🎩 Hair-color:  ${people.hair_color} </h5>
@@ -110,3 +113,15 @@ drawRating.addEventListener("change", () => {
 
 // invocando la función drawCharacters con el argumento characters para ver en interfaz
 drawCharacters(characters)
+
+// filtrando por medio de un select
+drawFilter.addEventListener("change", () => {
+  if (drawFilter.value === selectFilter) {drawCharacters(filteringBy(characters))
+  } if (drawFilter.value === female) {
+    drawCharacters(filteringBy(characters, "gender")) 
+  } if (drawFilter.value === male) { 
+    drawCharacters(filteringBy(characters, 'gender')) 
+  }
+})
+
+// console.log(filteringBy(characters, "gender"));
