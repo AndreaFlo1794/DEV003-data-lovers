@@ -34,16 +34,16 @@ navCharacters.addEventListener("click", () => {
 })
 
 // llamado de los elementos
-const ghibliCardsEl = document.getElementById("data-container");
-const drawRating = document.getElementById('sortBy');
+const ghibliCardsEl = document.getElementById("data-container")
+const drawRating = document.getElementById('sortBy')
 const allFilms = document.getElementById("select").value
 const score = document.getElementById('score').value
 const release = document.getElementById('release-date').value
-const cardsCharactersEl= document.getElementById('showData-characters');
+const cardsCharactersEl= document.getElementById('showData-characters')
 const drawFilter= document.getElementById("filterBy");
-const selectFilter=document.getElementById("select-filter").value;
-const female= document.getElementById("female").value;
-const male= document.getElementById("male").value;
+const selectFilter=document.getElementById("select-filter").value
+const female= document.getElementById("female").value
+const male= document.getElementById("male").value
 
 // funcion para pintar datos (template) con el fin de que aparezcan en interfaz con innerHTML
 function drawFilms(filmsArray) {
@@ -101,27 +101,25 @@ drawFilms(getData)
 
 // ordenando por medio de un select
 drawRating.addEventListener("change", () => {
-  if (drawRating.value === allFilms) {drawFilms(orderingBy(getData))
-  } if (drawRating.value === score) {
-    drawFilms(orderingBy(getData, 'rt_score')) 
-  } if (drawRating.value === release) { 
-    drawFilms(orderingBy(getData, 'release_date')) 
-  }
+  if (drawRating.value === allFilms) {drawFilms(orderingBy(getData))} 
+  if (drawRating.value === score) {drawFilms(orderingBy(getData, 'rt_score'))} 
+  if (drawRating.value === release) {drawFilms(orderingBy(getData, 'release_date'))}
 })
 
 // <section class = "characters"
 
 // invocando la función drawCharacters con el argumento characters para ver en interfaz
-drawCharacters(characters)
+drawCharacters(characters) 
 
 // filtrando por medio de un select
+
 drawFilter.addEventListener("change", () => {
-  if (drawFilter.value === selectFilter) {drawCharacters(filteringBy(characters))
-  } if (drawFilter.value === female) {
-    drawCharacters(filteringBy(characters, "gender")) 
-  } if (drawFilter.value === male) { 
-    drawCharacters(filteringBy(characters, 'gender')) 
-  }
+  if (drawFilter.value === selectFilter) {drawCharacters(filteringBy(characters, "gender"))} 
+  if (drawFilter.value === female) {drawCharacters(filteringBy(characters, "gender", "Female"))} 
+  if (drawFilter.value === male) {drawCharacters(filteringBy(characters, 'gender', "Male"))}
 })
 
+
 // console.log(filteringBy(characters, "gender"));
+
+
