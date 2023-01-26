@@ -1,20 +1,17 @@
 
-export const orderingBy = (data , key) =>{  
+export const orderingBy = (data, key) => {
 
-  return [... data].sort((a, b) => {                      
-   return  b[key] - a[key]
-  })  
+  return [...data].sort((a, b) => {
+    return b[key] - a[key]
+  })
 }
 
-export const filteringBy = (data , key)=>{
+export const filteringBy = (data, key, target) => {
 
-  return [...data].filter((film)=>{
-
-    const result = /female/i.test(film[key])
-    // const result2 = /male/i.test(film[key])
-    return result 
+  return [...data].filter((film) => {
+    const result = film[key].indexOf(target) !== -1
+    return result
   })
- 
 }
 
 
