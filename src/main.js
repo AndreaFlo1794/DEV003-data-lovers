@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js'; //importar datos
-import { filteringBy, orderingBy } from './data.js';
+import { calculatePercent,filteringBy, orderingBy } from './data.js';
 
 //variable donde almacenamos los datos para trabajar más comodamente
 const getData = data.films
@@ -35,15 +35,16 @@ navCharacters.addEventListener("click", () => {
 
 // llamado de los elementos
 const ghibliCardsEl = document.getElementById("data-container")
-const drawRating = document.getElementById('sortBy')
+const drawRating = document.getElementById("sortBy")
 const allFilms = document.getElementById("select").value
-const score = document.getElementById('score').value
-const release = document.getElementById('release-date').value
-const cardsCharactersEl= document.getElementById('showData-characters')
+const score = document.getElementById("score").value
+const release = document.getElementById("release-date").value
+const cardsCharactersEl= document.getElementById("showData-characters")
 const drawFilter= document.getElementById("filterBy");
 const selectFilter=document.getElementById("select-filter").value
 const female= document.getElementById("female").value
 const male= document.getElementById("male").value
+const statistics=document.getElementById("statistics")
 
 // funcion para pintar datos (template) con el fin de que aparezcan en interfaz con innerHTML
 function drawFilms(filmsArray) {
@@ -102,7 +103,7 @@ drawFilms(getData)
 // ordenando por medio de un select
 drawRating.addEventListener("change", () => {
   if (drawRating.value === allFilms) {drawFilms(orderingBy(getData))} 
-  if (drawRating.value === score) {drawFilms(orderingBy(getData, 'rt_score'))} 
+  if (drawRating.value === score) {drawFilms(orderingBy(getData, 'rt_score', "asc"))} 
   if (drawRating.value === release) {drawFilms(orderingBy(getData, 'release_date'))}
 })
 
@@ -114,12 +115,41 @@ drawCharacters(characters)
 // filtrando por medio de un select
 
 drawFilter.addEventListener("change", () => {
-  if (drawFilter.value === selectFilter) {drawCharacters(filteringBy(characters, "gender"))} 
-  if (drawFilter.value === female) {drawCharacters(filteringBy(characters, "gender", "Female"))} 
-  if (drawFilter.value === male) {drawCharacters(filteringBy(characters, 'gender', "Male"))}
+  if (drawFilter.value === selectFilter) {
+    drawCharacters(characters)
+  } 
+  if (drawFilter.value === female) {
+    const filteredCharacters = filteringBy(characters, "gender", "Female")
+    drawCharacters(filteredCharacters)
+    console.log(calculatePercent(characters.length,filteredCharacters.length));
+  } 
+  if (drawFilter.value === male) {
+    const filteredCharacters = filteringBy(characters, 'gender', "Male")
+    drawCharacters(filteredCharacters)
+    console.log(calculatePercent(characters.length,filteredCharacters.length));
+  }
 })
 
+//Funcion para pintar los porcentajes
 
-// console.log(filteringBy(characters, "gender"));
 
+
+
+
+// const filterResult=filteringBy(characters, selectFilter);
+// const percent=calculatePercent(characters, filterResult);
+
+// drawFilter(characters);
+// mostrar(percent, filteringBy, selectFilter);
+// document.getElementById("statistics").style.display="block";
+// function mostrar(percent, gender){
+//   const estadistica=(`${gender} ha participado en ${percent} peliculas`);
+//   console.log(estadistica);
+//   const mostrar=statistics.innerHTML=estadistica;
+//   return mostrar;
+  
+// }
+// console.log(mostrar(characters.gender, "Female"));
+
+console.log(calculatePercent(characters, "gender", "female"));
 
