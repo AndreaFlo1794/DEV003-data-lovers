@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Ghibli</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/totorofavicon.ico">
- </head>
 
- <body>
-  <input type="search" class="search" placeholder="🔍Search... ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Ghibli</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/totorofavicon.ico">
+</head>
+
+<body>
   <header class="topheader">
     <nav class="topnav">
       <div class="logo">
-        <img src="img/totoro-logo.png" alt="logo"/>
+        <img src="img/totoro-logo.png" alt="logo" />
       </div>
       <div id="nav-title">
         <h1>GHIBLI'S WORLD</h1>
@@ -26,9 +26,9 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <!--Bienvenida a Studio Ghibli-->
+    <!--bienvenida a Studio Ghibli-->
     <section class="home" id="home">
       <div class="home-background">
         <h3 class="home-title">Hi Ghibli Lover</h3>
@@ -37,50 +37,50 @@
           Here you can check the films produced by the studio,<br>
           their characters and other information that you will love.<br>
           <br>
-          <!--enlace para ver algunos films en Netflix-->
           Do you want to see some of the films?<br> Watch on
           <a href="https://www.netflix.com/co/browse/genre/81227213" target="_blank">Netflix</a>
-          </p>
-          <div class="totoro" id="totoro">
-            <img  class="totoro"src="img/totoro-home.gif">
-          </div>
+        </p>
+        <div class="totoro" id="totoro">
+          <img class="totoro" src="img/totoro-home.gif">
         </div>
+      </div>
     </section>
 
-    <!--página que muestra todos los films y permite ORDENAR por score y release date-->
+    <!--interfaz que muestra todos los films y permite ORDENAR por score, release date-->
     <section class="films" id="films">
       <div class="order">
         <label>Sort by:</label>
         <select id="sortBy">
-          <option selected id="select">All films</option>
-          <option id="score" value="score">Score</option>
-          <option id="release-date" value="release-date">Release date</option>
+          <option selected value="all-films">All Films</option>
+          <option value="high-score">High Score</option>
+          <option value="low-score">Low Score</option>
+          <option value="latest-release">Latest Release</option>
+          <option value="older-release">Older Release</option>
         </select>
       </div>
-
+      <!-- <input type="search" class="search" placeholder="🔍Search... "> -->
+      <!-- contenedor donde se pinta la data -->
       <div id="data-container">
-        <!-- <div class="film-container"> -->
-
+        <!-- <div class="film-container"> en main.js-->
       </div>
+
+
     </section>
 
-    <!--página que muestra todos los personajes y permite FILTRAR por especie-->
+    <!--interfaz que muestra todos los personajes y permite FILTRAR por especie-->
     <section class="characters" id="characters">
       <div class="selector-character">
         <label>Filter by:</label>
         <select id="filterBy">
-          <option selected id="select-filter">Gender</option>
-          <option id="female" value="Female">Female</option>
-          <option id="male" value="Male">Male</option>
-        </select>
-          <select id="filterBy">
-            <option selected id="selecter-filterSpecie">Specie</option>
-            <option id="Human" value="Human">Human</option>
-            <option id="Animal" value="Animal">Animal</option>
-            <option id="Other" value="Other">Other</option>
+          <option selected value="select-filter">All Characters</option>
+          <option id="female" value="female">Female</option>
+          <option id="male" value="male">Male</option>
         </select>
       </div>
- 
+
+      <div id="statistics-container">
+
+      </div>
       <div class="showData" id="showData-characters">
         <!--aquí se mostrarán los personajes-->
       </div>
@@ -90,15 +90,18 @@
 
   <!--redes sociales-->
   <footer>
-    <p></p><a href="https://www.facebook.com/GhibliUSA/" target="_blank"><img class="redes" src="img/facebook.png"
-        alt="Facebook"></a>
-    <a href="https://www.instagram.com/ghibliusa/" target="_blank"><img class="redes" src="img/instagram.png"
-        alt="Instagram"></a>
-    <a href="https://www.youtube.com/@studioghibli4734" target="_blank"><img class="redes" src="img/youtube.png"
-        alt="Youtube"></a></p>
-
     <div>
-      <p>Data Lovers by: Andrea Flores & Isabel Román</p>
+      <p>
+        <a href="https://www.facebook.com/GhibliUSA/" target="_blank"><img class="redes" src="img/facebook.png"
+            alt="Facebook"></a>
+        <a href="https://www.instagram.com/ghibliusa/" target="_blank"><img class="redes" src="img/instagram.png"
+            alt="Instagram"></a>
+        <a href="https://www.youtube.com/@studioghibli4734" target="_blank"><img class="redes" src="img/youtube.png"
+            alt="Youtube"></a>
+      </p>
+    </div>
+    <div>
+      <p>Data Lovers by: Andrea Flores - Isabel Román</p>
     </div>
   </footer>
 </body>
