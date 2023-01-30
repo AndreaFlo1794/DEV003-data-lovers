@@ -1,10 +1,14 @@
+export const allData = (data) => {
+  data = data.films;
+  return data;
+}
 
 export const orderingBy = (data, key, order="desc") => {
-
-  return [...data].sort((a, b) => {
-    return order === "desc" ? b[key] - a[key] : a[key] - b[key]
-  })
+return [...data].sort((a, b) => {
+  return order==="desc" ? b[key]-a[key] : a[key]-b[key]
+})
 }
+
 
 export const filteringBy = (data, key, target) => {
 
@@ -15,13 +19,6 @@ export const filteringBy = (data, key, target) => {
 }
 
 
-// export const searchingBy = (data,key) =>{
-//   return [...data].find((film) => {
-//     const res=film[key]==="Hayao";
-//     return res
-// })
-// }
-  
 export const calculatePercent= (total,segment)=>{
   const percent=Math.round((segment*100)/total);
   return percent

@@ -398,6 +398,21 @@ a {
     
 }
 
+/*estilo para el porcentaje*/
+.statistics{
+    background-color:#1F7AC1;
+    margin-left: 540px;
+    width: 310px;
+    border-radius: 5px;
+}
+.male-percent{
+    text-align: center;
+    margin-left: 10px;
+    margin-top:-50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
 
 /* links para redes sociales */
 footer {

@@ -15,6 +15,8 @@ En este caso lo que buscamos es, con las cards ya creadas y cada una con rate sc
 ##### H.2.1 Ordenar Datos (release date)
 Una vez ya ordenadas por score, también consideramos necesario ordenarlas por año de lanzamiento, de esta manera el usuario podría seleccionar ver quizás la más reciente o más antigua.
 
+#### H.3 Filtrar Personajes (género)
+
 ### Diseño de la interfaz de Usuario
 
 #### Prototipo de baja fidelidad
@@ -35,6 +37,9 @@ Mediante Figma realizamos el prototipo de alta, ya habiendo elegido un fondo y p
 
 https://www.figma.com/file/R6S8CLaVrcAAtlGUVjllbi/SG?node-id=0%3A1&t=gZMJv8c5VicvH431-0
 
+### Test de Usabilidad
+ 
+ - Nuestro primer test de usabilidad, lo aplicamos con la función de ordenar ya desarrollada, los usuarios que nos apoyaron, nos comentaron detalles del CSS para mejorar la interfaz principal, como de los films, en cuanto al orden y facilidad para navegar en la pagina, recibimos muy buen feedback.
 
 ## Índice
 
