@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +36,7 @@ a {
     display: flex;
     align-items: center;
 }
+
 .logo img {
     /* display: flex; */
     width: 170px;
@@ -58,7 +58,6 @@ a {
     top: 0px;
     /* justify-content: center; */
 }
-
 
 .topnav {
     display: flex;
@@ -83,15 +82,14 @@ a {
 }
 
 .menu {
-
     display: flex;
     list-style: none;
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    /* margin-right: 50px; */
-    
+    /* margin-right: 50px; */   
 }
+
 .menu li{
     padding: 0 15px;;
 }
@@ -127,8 +125,6 @@ a {
     font-weight:bold;
     /* background: rgb(249, 242, 240);
     background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); */
-    
-    
 }
 
 .home-background {
@@ -137,7 +133,6 @@ a {
     background-size: cover;
     /* bottom: 0; */
     /* height: 150vh; */
-
 }
 
 .home-title{
@@ -150,8 +145,7 @@ a {
     -webkit-text-stroke-color: #322f3e;
     /* color: white; */
     /* background: rgb(249, 242, 240);
-    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); */
-    
+    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); */   
 }
 
 /* Sección 2 ordenar films */
@@ -166,9 +160,8 @@ a {
     background-image: url("img/fondo2.jpg");
     background-attachment: fixed;
     background-size: cover;
-    
-
 }
+
 .order {
     color: #7b7b08;
     text-shadow: #b74651;
@@ -176,12 +169,10 @@ a {
     font-weight: bold;
     padding: 20px;
     margin-left: 200px;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;   
 }
 
 #sortBy {
-    
     font-size: 50%;
     text-align: center;
     background-color: white;
@@ -190,10 +181,9 @@ a {
     width: 10rem;
     height: 2rem;
     color:#7b7b08;
-    margin-top: 10px;
-    
-    
+    margin-top: 10px;   
 }
+
 /*Barra de búsqueda*/
 .search{
     position: absolute;
@@ -203,10 +193,8 @@ a {
     border-radius: 7px;
     border-color: #7b7b08;
     margin-left: 880px;
-    margin-top: -50px;
-   
+    margin-top: -50px;  
 }
-
 
 ::placeholder{
     text-align: center;
@@ -214,9 +202,7 @@ a {
     font-size: 15px;
 }
 
-
 /* Mostrar la data */
-
 #data-container {
     margin-top:30px;
     width: 100%;
@@ -243,6 +229,7 @@ a {
     /* background: rgb(151, 228, 191); */
     /* background: linear-gradient(90deg, rgba(151, 228, 191, 0.5914740896358543) 100%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%); */
 }
+
 .film-container .face{
     position: absolute;
     width: 220px;
@@ -257,6 +244,7 @@ a {
     transform: perspective(600px)rotateY(0deg);
     box-shadow: 0 5px 10px rgba(0,0,0,2) 6px 20 px 0 rgba(0,0,0,19);
 }
+
 .film-container h4 h5{
     position: absolute;
     bottom: 0;
@@ -279,7 +267,6 @@ a {
     margin-top: 15px;
     margin-bottom: 15px;
     height: 290px;
-   
 }
 
 .film-container .back {
@@ -294,8 +281,6 @@ a {
     box-shadow: 0 5px 10px #000;
     width: 210px;
     height: 360px;
-    
-
 }
 
 .film-container .back h3 {
@@ -308,8 +293,7 @@ a {
     letter-spacing: 1px;
     font-size: 11px;
     text-align: center;
-    margin-bottom: 80px;
-   
+    margin-bottom: 80px; 
 } 
 
 .film-container:hover .front {
@@ -321,7 +305,6 @@ a {
 }
 
 /* Sección 3 Characters */
-
 .characters {
     margin-top: 99px;
     color: white;
@@ -351,8 +334,8 @@ a {
     padding: 25px;
     margin: 20px;
     background: #dcffffa1;
-
 }
+
 .character-container:hover {
     box-shadow: 0 8px 16px 0 whitesmoke;
 }
@@ -360,7 +343,6 @@ a {
 .character-container img{
     margin-top: 10px;
     max-width: 150px;
-
 }
 
 .character-container h4{
@@ -369,12 +351,14 @@ a {
     color: #b74651;
     text-align: center;
 }
+
 .character-container h5{
     padding: 1px;
     font-size: 15px;
     color: #104e73;
     text-align: center;
 }
+
 .selector-character {
     text-align: center;
     /* background-color: aqua; */
@@ -394,25 +378,25 @@ a {
     width: 8rem;
     height: 2rem;
     color: black;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;   
 }
 
 /*estilo para el porcentaje*/
-.statistics{
-    background-color:#1F7AC1;
+#statistics-container{
     margin-left: 540px;
     width: 310px;
     border-radius: 5px;
+    background-color:#1F7AC1;
 }
-.male-percent{
+
+.female-percent,
+.male-percent {
     text-align: center;
     margin-left: 10px;
     margin-top:-50px;
     margin-bottom: 20px;
     color: white;
 }
-
 
 /* links para redes sociales */
 footer {
