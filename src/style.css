@@ -7,13 +7,12 @@
 }
 
 html {
-    scroll-behavior: smooth;
     --primary-color:white;
-    --container-cards: #d9ec9d;
-    --text: #0d4c81;
-    --footer: #d4cdc5;
-    --orYfil:#1F7AC1;
-    --text-line-input: #7b7b08;
+    --container-cards: #eeee10;
+    --text-oryfil: #7b7b08;
+    --footer: #c5c2a7;
+    --box-shadow: #817c63;
+    --text: #332222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,7 +34,6 @@ a {
 }
 
 .logo img {
-
     width: 170px;
     height: 100px;
 }
@@ -66,7 +64,7 @@ a {
     margin-left: 240px;
     line-height: 100px;
     -webkit-text-stroke: 1px ;
-    -webkit-text-stroke-color: #7b7b08;
+    -webkit-text-stroke-color: var(--text-oryfil);
 }
 
 .menu {
@@ -74,8 +72,7 @@ a {
     list-style: none;
     justify-content: space-around;
     margin: 0;
-    padding: 0;
-      
+    padding: 0;  
 }
 
 .menu li{
@@ -83,17 +80,16 @@ a {
 }
 
 .menu a {
-    color: #7b7b08;;
+    color: var(--text-oryfil);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 100px;
-    /* para alinear con respecto a los elementos de mismo contenedor */
     text-transform: uppercase;
 }
 
 .menu a:hover {
-    color: #c5c2a7;
+    color: var(--footer);
 }
 
 /*Bienvenida a Studio Ghibli*/
@@ -122,7 +118,7 @@ a {
     font-weight: bold;
     padding: 10px;
     margin: 0;
-    color: white;
+    color: var(--primary-color);
     -webkit-text-stroke: 1px ;
     -webkit-text-stroke-color: #322f3e;  
 }
@@ -143,7 +139,7 @@ a {
 #inputs-container {
     display: flex;
     flex-direction: row;
-    color: var(--text-line-input);
+    color: var(--text-oryfil);
     font-size: 23px;
 }
 
@@ -154,19 +150,18 @@ a {
     font-family: 'Montserrat', sans-serif;   
 }
 
-#sortBy {
+#sort-by {
     text-align: center;
     background-color: var(--primary-color);
-    border: 2px solid var(--text-line-input);
+    border: 2px solid var(--text-oryfil);
     border-radius: 7px;
     width: 10rem;
     height: 2rem;
-    color: var(--text-line-input);
+    color: var(--text-oryfil);
     margin-top: 10px;   
 }
 
 /*Barra de búsqueda*/
-
 .search{
     font-size: 15px;
     text-align: center;
@@ -174,7 +169,7 @@ a {
     height: 2rem;
     background-color: var(--primary-color);
     border-radius: 7px;
-    border-color: var(--text-line-input);
+    border-color: var(--text-oryfil);
 }
 
 /* Mostrar la data */
@@ -183,7 +178,6 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
     justify-content: center;
 }
@@ -193,7 +187,7 @@ a {
     width: 220px;
     height: 360px;
     text-align: center;
-    box-shadow: #817c63;
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
     border-radius: 7px;
     padding: 20px;
@@ -228,7 +222,7 @@ a {
 }
 
 .film-container:hover {
-    box-shadow: 0 8px 16px 0 #7b7b08;
+    box-shadow: 0 8px 16px 0 var(--text-oryfil);
 }
 
 .film-container .front img {
@@ -241,7 +235,7 @@ a {
 
 .film-container .back {
     transform: perspective(600px) rotateY(180deg);
-    background: #332222;
+    background: var(--text);
     padding: 5px;
     color: #f3f3f3;
     display: flex;
@@ -283,12 +277,11 @@ a {
     background-size: cover;
 }
 
-.showData{
+.show-data{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: -8px;
-    /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
     justify-content: center; 
 }
@@ -298,7 +291,7 @@ a {
     width: 220px;
     height: 360px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 #817c63;
+    box-shadow: 0 4px 8px 0 var(--box-shadow);
     transition: 0.3s;
     border-radius: 7px;
     padding: 25px;
@@ -318,35 +311,35 @@ a {
 .character-container h4{
     padding: 1px;
     font-size: 16px;
-    color: #332222;
+    color: var(--text);
     text-align: center;
 }
 
 .character-container h5{
     padding: 1px;
     font-size: 15px;
-    color: #332222;
+    color: var(--text);
     text-align: center;
 }
 
 .selector-character {
     text-align: center;
-    color: #7b7b08;
+    color: var(--text-oryfil);
     font-size: 23px;
     font-weight: bold;
     padding: 35px;
     font-family: 'Montserrat', sans-serif;   
 }
 
-#filterBy {
+#filter-by {
     font-size: 55%;
     text-align: center;
     background-color: whitesmoke;
-    border: 2px solid #7b7b08;
+    border: 2px solid var(--text-oryfil);
     border-radius: 7px;
     width: 10rem;
     height: 2rem;
-    color: #7b7b08;
+    color: var(--text-oryfil);
     margin-bottom: 20px;   
 }
 
@@ -357,7 +350,7 @@ a {
     margin-left: 10px;
     margin-top:-50px;
     margin-bottom: 20px;
-    color:#7b7b08;
+    color:var(--text-oryfil);
     font-size: 20px;
 }
 
