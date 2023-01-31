@@ -51,7 +51,7 @@ function drawFilms(filmsArray) {
       </div>
     </div>     
     `
-  }).join("")
+  })
 
   ghibliCardsEl.innerHTML = card
   return ghibliCardsEl
@@ -82,7 +82,7 @@ function drawCharacters(peopleArray) {
       <h5> 🎩 Hair-color: ${people.hair_color} </h5>
     </div>
     `
-  }).join("")
+  })
 
   cardsCharactersEl.innerHTML = cardCharacter
 }
