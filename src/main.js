@@ -1,5 +1,5 @@
 import data from "./data/ghibli/ghibli.js"; //importar datos
-import { calculatePercent, filteringBy, orderingBy } from "./data.js";
+import { calculatePercent, filteringBy, orderingBy, searchingBy } from "./data.js";
 
 //variable donde almacenamos los datos para trabajar más comodamente
 const getData = data.films
@@ -151,12 +151,8 @@ drawFilter.addEventListener("change", () => {
 const search = document.querySelector(".search")
 search.addEventListener("change", (e) => {
   const searchText = e.target.value;
-
-  const searchResult = getData.filter((film) => {
-    const index = `${film.title} ${film.director}`
-    return index.toLowerCase().includes(searchText.toLowerCase())
-  })
-  drawFilms(searchResult)
+  const result= searchingBy(getData, searchText);
+  drawFilms(result);
 })
   
     
