@@ -40,8 +40,9 @@ function drawFilms(filmsArray) {
     <div class = "film-container">
       <div class = "face front">
         <img src = "${film.poster}">
-        <h4> 📆 ${film.release_date} </h4>
-        <h5> ⭐ ${film.rt_score} </h5>
+        <h4> Director: ${film.director} </h4>
+        <h4> &#128197 ${film.release_date} </h4>
+        <h4> &#9733 ${film.rt_score} </h4>
       </div>
     
       <div class="face back">
@@ -124,59 +125,38 @@ const drawFilter = document.getElementById("filterBy")
 
 drawFilter.addEventListener("change", () => {
   let drawPercent;
+  let filteredCharacters;
   // console.log (filteredCharacters);
-  // switch (drawFilter.value) {
-  // case "select-filter":
-  //   drawCharacters(characters);
-  //   break;
-  // case "female":
-  //   filteringBy(characters, "gender", "Female");
-  //   drawCharacters(filteredCharacters);
-  //   drawPercent =
-  //       `<h4 class="female-percent"> ${calculatePercent(characters.length, filteredCharacters.length)} % of the characters are female </h4>`
-  //   statistics.innerHTML = drawPercent
-  //   break;
-  // case "male":
-  //   filteringBy(characters, 'gender', "Male")
-  //   drawCharacters(filteredCharacters);
-  //   drawPercent =
-  //     `<h4 class="male-percent"> ${calculatePercent(characters.length, filteredCharacters.length)} % of the characters are male </h4>`
-  //   statistics.innerHTML = drawPercent
-  //   break;
-  // }
-  
-    
-  if (drawFilter.value === "select-filter") {
-    drawCharacters(characters)
-  }
-  if (drawFilter.value === "female") {
-    const filteredCharacters = filteringBy(characters, "gender", "Female");
+  switch (drawFilter.value) {
+  case "select-filter":
+    drawCharacters(characters);
+    break;
+  case "female":
+    filteredCharacters = filteringBy(characters, "gender", "Female");
     drawCharacters(filteredCharacters);
-    // console.log(calculatePercent(characters.length, filteredCharacters.length));
     drawPercent =
-      `<h4 class="female-percent"> ${calculatePercent(characters.length, filteredCharacters.length)} % of the characters are female </h4>`
+        `<h4 class="female-percent"> ${calculatePercent(characters.length, filteredCharacters.length)} % of the characters are female </h4>`
     statistics.innerHTML = drawPercent
-  }
-  if (drawFilter.value === "male") {
-    const filteredCharacters = filteringBy(characters, 'gender', "Male")
+    break;
+  case "male":
+    filteredCharacters = filteringBy(characters, 'gender', "Male")
     drawCharacters(filteredCharacters);
     drawPercent =
       `<h4 class="male-percent"> ${calculatePercent(characters.length, filteredCharacters.length)} % of the characters are male </h4>`
     statistics.innerHTML = drawPercent
-    // console.log(calculatePercent(characters.length,filteredCharacters.length));
+    break;
   }
 })
 
-//Funcion para pintar los porcentajes
+const search = document.querySelector(".search")
+search.addEventListener("change", (e) => {
+  const searchText = e.target.value;
 
-// function showPercent(){
-//   const percent=""
-// }
-
-
-// `<h4> ${calculatePercent(characters , filteredCharacters )} % de los personajes son mujeres </h4>`
-
-
-// statistics.innerHTML= percent
-
-// console.log(showPercent);
+  const searchResult = getData.filter((film) => {
+    const index = `${film.title} ${film.director}`
+    return index.toLowerCase().includes(searchText.toLowerCase())
+  })
+  drawFilms(searchResult)
+})
+  
+    
