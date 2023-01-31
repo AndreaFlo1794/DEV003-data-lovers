@@ -1,5 +1,5 @@
 import data from "./data/ghibli/ghibli.js"; //importar datos
-import { calculatePercent, filteringBy, orderingBy } from "./data.js";
+import { calculatePercent, filteringBy, orderingBy, searchingBy } from "./data.js";
 
 //variable donde almacenamos los datos para trabajar más comodamente
 const getData = data.films
@@ -51,7 +51,7 @@ function drawFilms(filmsArray) {
       </div>
     </div>     
     `
-  }).join("")
+  })
 
   ghibliCardsEl.innerHTML = card
   return ghibliCardsEl
@@ -66,7 +66,7 @@ getData.forEach(film => {
   })
 });
 
-const cardsCharactersEl = document.getElementById("showData-characters")
+const cardsCharactersEl = document.getElementById("show-data-characters")
 const statistics = document.getElementById("statistics-container")
 
 function drawCharacters(peopleArray) {
@@ -82,7 +82,7 @@ function drawCharacters(peopleArray) {
       <h5> 🎩 Hair-color: ${people.hair_color} </h5>
     </div>
     `
-  }).join("")
+  })
 
   cardsCharactersEl.innerHTML = cardCharacter
 }
@@ -93,7 +93,7 @@ function drawCharacters(peopleArray) {
 drawFilms(getData)
 
 // ordenando por medio del select sortBy
-const drawRating = document.getElementById("sortBy")
+const drawRating = document.getElementById("sort-by")
 // Se iguala al value de cada option 
 drawRating.addEventListener("change", () => {
   switch (drawRating.value) {
@@ -121,7 +121,7 @@ drawRating.addEventListener("change", () => {
 drawCharacters(characters)
 
 // filtrando por medio del select filterBy
-const drawFilter = document.getElementById("filterBy")
+const drawFilter = document.getElementById("filter-by")
 
 drawFilter.addEventListener("change", () => {
   let drawPercent;
@@ -151,12 +151,8 @@ drawFilter.addEventListener("change", () => {
 const search = document.querySelector(".search")
 search.addEventListener("change", (e) => {
   const searchText = e.target.value;
-
-  const searchResult = getData.filter((film) => {
-    const index = `${film.title} ${film.director}`
-    return index.toLowerCase().includes(searchText.toLowerCase())
-  })
-  drawFilms(searchResult)
+  const result= searchingBy(getData, searchText);
+  drawFilms(result);
 })
   
     

@@ -7,25 +7,20 @@
 }
 
 html {
-    scroll-behavior: smooth;
     --primary-color:white;
-    --container-cards: #d9ec9d;
-    --text: #0d4c81;
-    --footer: #d4cdc5;
-    --orYfil:#1F7AC1;
-    --text-line-input: #7b7b08;
+    --container-cards: #eeee10;
+    --text-oryfil: #7b7b08;
+    --footer: #c5c2a7;
+    --box-shadow: #817c63;
+    --text: #332222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    /* background-image: url("img/background1.jpg");
-    background-size: cover;
-    background-attachment: fixed; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 100vh;
-    /* max-width: 100%; */
 }
 
 a {
@@ -39,33 +34,23 @@ a {
 }
 
 .logo img {
-    /* display: flex; */
     width: 170px;
     height: 100px;
-    /* align-items: center;
-    position: absolute;
-    margin-left: 110px; */
 }
 
 /* navbar */
 .topheader {
     display: flex;
-    background-color: rgb(6, 174, 135);
-    background: linear-gradient(90deg, rgb(151,228,191,0.4150035014005602) 0%, rgba(151,228,191,0.4150035014005602) 100%, rgb(74, 240, 176) 100%);
+    background-color: #eeee108a;
     width: 100%;
-    /* height: auto; */
-    position: fixed;
+    position: sticky;
+    z-index: 1;
     left: 0;
-    top: 0px;
-    /* justify-content: center; */
+    top: 0px;  
 }
 
 .topnav {
     display: flex;
-    /* justify-content: space-between;
-    /* separación entre cada opción */
-    /* padding: 10px; */
-    /* width: 100%; */ 
 }
 
 #nav-title {
@@ -79,7 +64,7 @@ a {
     margin-left: 240px;
     line-height: 100px;
     -webkit-text-stroke: 1px ;
-    -webkit-text-stroke-color: #0aa67c;
+    -webkit-text-stroke-color: var(--text-oryfil);
 }
 
 .menu {
@@ -87,8 +72,7 @@ a {
     list-style: none;
     justify-content: space-around;
     margin: 0;
-    padding: 0;
-    /* margin-right: 50px; */   
+    padding: 0;  
 }
 
 .menu li{
@@ -96,67 +80,56 @@ a {
 }
 
 .menu a {
-    /* padding: 0 15px; */
-    color: #0aa67c;
+    color: var(--text-oryfil);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 100px;
-    /* para alinear con respecto a los elementos de mismo contenedor */
     text-transform: uppercase;
 }
 
 .menu a:hover {
-    color: var(--text);
+    color: var(--footer);
 }
 
 /*Bienvenida a Studio Ghibli*/
 .home {
-    margin-top: 99px;
     text-align: center;  
 }
 
 .home p{
     font-family:'Montserrat', sans-serif;
     font-size: 35px;
-    /* line-height: 1.3px; */
     margin: 20px auto;
     padding: 10px;
     color: #322f3e ;
     font-weight:bold;
-    /* background: rgb(249, 242, 240);
-    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); */
 }
 
 .home-background {
     background-image: url("img/bienvenidafinal.png");
     background-attachment: fixed;
     background-size: cover;
-    /* bottom: 0; */
-    /* height: 150vh; */
 }
 
 .home-title{
     font-family: 'Ceviche One', cursive;
     font-size: 50px;
     font-weight: bold;
+    padding: 10px;
     margin: 0;
-    color: #f46472;
+    color: var(--primary-color);
     -webkit-text-stroke: 1px ;
-    -webkit-text-stroke-color: #322f3e;
-    /* color: white; */
-    /* background: rgb(249, 242, 240);
-    background: linear-gradient(90deg, rgba(239, 234, 232, 0.479) 0%, rgba(239, 237, 236, 0.559) 35%, rgba(255, 191, 156, 0.302) 100%); */   
+    -webkit-text-stroke-color: #322f3e;  
+}
+ 
+.totoro{
+    margin-top: -10px;
 }
 
 /* Sección 2 ordenar films */
 
 .films {
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    margin-top: 100px;
-    /* justify-content: center; */
     display: none;
     background-image: url("img/fondo2.jpg");
     background-attachment: fixed;
@@ -166,48 +139,37 @@ a {
 #inputs-container {
     display: flex;
     flex-direction: row;
-    color: var(--text-line-input);
+    color: var(--text-oryfil);
     font-size: 23px;
 }
 
-.order,
-.search-input {
-    /* color: #7b7b08; */
-    /* text-shadow: #b74651; */
-    /* font-size: 23px; */
+.order, .search-input {
     font-weight: bold;
     padding: 20px;
     margin-left: 200px;
     font-family: 'Montserrat', sans-serif;   
 }
 
-#sortBy {
-    /* font-size: 50%; */
-    /* text-align: center; */
+#sort-by {
     text-align: center;
     background-color: var(--primary-color);
-    border: 2px solid var(--text-line-input);
+    border: 2px solid var(--text-oryfil);
     border-radius: 7px;
     width: 10rem;
     height: 2rem;
-    color: var(--text-line-input);
+    color: var(--text-oryfil);
     margin-top: 10px;   
 }
 
 /*Barra de búsqueda*/
-
 .search{
-    /* position: absolute; */
-    /* display: flex; */
     font-size: 15px;
     text-align: center;
     width: 13rem;
     height: 2rem;
     background-color: var(--primary-color);
     border-radius: 7px;
-    border-color: var(--text-line-input);
-    /* margin-left: 880px;
-    margin-top: -50px;   */
+    border-color: var(--text-oryfil);
 }
 
 /* Mostrar la data */
@@ -216,11 +178,8 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
     justify-content: center;
-    /* margin-left: 30px;
-    margin-right: 50px; */
 }
 
 .film-container{
@@ -228,14 +187,12 @@ a {
     width: 220px;
     height: 360px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 var(--orYfil);
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
     border-radius: 7px;
     padding: 20px;
     margin: 20px;
-    background: #f1890984;
-    /* background: rgb(151, 228, 191); */
-    /* background: linear-gradient(90deg, rgba(151, 228, 191, 0.5914740896358543) 100%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%); */
+    background: #eeee108a;
 }
 
 .film-container .face{
@@ -265,11 +222,10 @@ a {
 }
 
 .film-container:hover {
-    box-shadow: 0 8px 16px 0 #58D68D;
+    box-shadow: 0 8px 16px 0 var(--text-oryfil);
 }
 
 .film-container .front img {
-    /* position: absolute; */
     width: 220px;
     border-radius: 7px;
     margin-top: 15px;
@@ -279,7 +235,7 @@ a {
 
 .film-container .back {
     transform: perspective(600px) rotateY(180deg);
-    background: rgb(3, 35, 54);
+    background: var(--text);
     padding: 5px;
     color: #f3f3f3;
     display: flex;
@@ -314,19 +270,18 @@ a {
 
 /* Sección 3 Characters */
 .characters {
-    margin-top: 99px;
     color: var(--primary-color);
     display: none;
-    background-image: url(img/characters.webp);
-    background-attachment: cover;
+    background-image: url(img/fondo2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.showData{
+.show-data{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: -8px;
-    /* con gap puedo hacer que se muestren más o menos separados */
     gap: 30px;
     justify-content: center; 
 }
@@ -336,12 +291,12 @@ a {
     width: 220px;
     height: 360px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 #4bb6ef;
+    box-shadow: 0 4px 8px 0 var(--box-shadow);
     transition: 0.3s;
     border-radius: 7px;
     padding: 25px;
     margin: 20px;
-    background: #dcffffa1;
+    background: #eeee108a;
 }
 
 .character-container:hover {
@@ -356,54 +311,47 @@ a {
 .character-container h4{
     padding: 1px;
     font-size: 16px;
-    color: #b74651;
+    color: var(--text);
     text-align: center;
 }
 
 .character-container h5{
     padding: 1px;
     font-size: 15px;
-    color: #104e73;
+    color: var(--text);
     text-align: center;
 }
 
 .selector-character {
     text-align: center;
-    /* background-color: aqua; */
-    color: var(--orYfil);
+    color: var(--text-oryfil);
     font-size: 23px;
     font-weight: bold;
     padding: 35px;
     font-family: 'Montserrat', sans-serif;   
 }
 
-#filterBy {
-    font-size: 50%;
+#filter-by {
+    font-size: 55%;
     text-align: center;
     background-color: whitesmoke;
-    border: 2px solid var(--orYfil);
+    border: 2px solid var(--text-oryfil);
     border-radius: 7px;
-    width: 8rem;
+    width: 10rem;
     height: 2rem;
-    color: black;
+    color: var(--text-oryfil);
     margin-bottom: 20px;   
 }
 
 /*estilo para el porcentaje*/
-#statistics-container{
-    margin-left: 540px;
-    width: 310px;
-    border-radius: 5px;
-    background-color:var(--orYfil);
-}
 
-.female-percent,
-.male-percent {
+.female-percent,.male-percent {
     text-align: center;
     margin-left: 10px;
     margin-top:-50px;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color:var(--text-oryfil);
+    font-size: 20px;
 }
 
 /* links para redes sociales */
@@ -411,7 +359,7 @@ footer {
     background: var(--footer);
     text-align: center;
     padding: 10px;
-    margin-top: auto;
+    bottom: 0;
 }
 
 footer img {

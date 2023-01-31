@@ -16,8 +16,11 @@ export const calculatePercent = (total, segment) => {
   return percent
 }
 
-
-
-
-
+export const searchingBy = (data, target) => {
+  const searchResult = data.filter((film) => {
+    const index = `${film.title} ${film.director}`
+    return index.toLowerCase().includes(target.toLowerCase());
+  })
+  return searchResult;
+}
 
