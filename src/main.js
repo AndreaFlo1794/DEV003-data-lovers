@@ -66,7 +66,7 @@ getData.forEach(film => {
   })
 });
 
-const cardsCharactersEl = document.getElementById("showData-characters")
+const cardsCharactersEl = document.getElementById("show-data-characters")
 const statistics = document.getElementById("statistics-container")
 
 function drawCharacters(peopleArray) {
@@ -93,7 +93,7 @@ function drawCharacters(peopleArray) {
 drawFilms(getData)
 
 // ordenando por medio del select sortBy
-const drawRating = document.getElementById("sortBy")
+const drawRating = document.getElementById("sort-by")
 // Se iguala al value de cada option 
 drawRating.addEventListener("change", () => {
   switch (drawRating.value) {
@@ -121,7 +121,7 @@ drawRating.addEventListener("change", () => {
 drawCharacters(characters)
 
 // filtrando por medio del select filterBy
-const drawFilter = document.getElementById("filterBy")
+const drawFilter = document.getElementById("filter-by")
 
 drawFilter.addEventListener("change", () => {
   let drawPercent;
