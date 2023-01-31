@@ -48,17 +48,23 @@
 
     <!--interfaz que muestra todos los films y permite ORDENAR por score, release date-->
     <section class="films" id="films">
-      <div class="order">
-        <label>Sort by:</label>
-        <select id="sortBy">
-          <option selected value="all-films">All Films</option>
-          <option value="high-score">High Score</option>
-          <option value="low-score">Low Score</option>
-          <option value="latest-release">Latest Release</option>
-          <option value="older-release">Older Release</option>
-        </select>
+      <div id="inputs-container">
+        <div class="order">
+          <label>Sort by:</label>
+            <select id="sortBy">
+              <option selected value="all-films">All Films</option>
+              <option value="high-score">High Score</option>
+              <option value="low-score">Low Score</option>
+              <option value="latest-release">Latest Release</option>
+              <option value="older-release">Older Release</option>
+            </select>
+        </div>
+        <div class="search-input">
+          <label>Type your search:</label>
+            <input type="search" class="search" placeholder="🔍 Press enter">
+        </div>
       </div>
-      <!-- <input type="search" class="search" placeholder="🔍Search... "> -->
+
       <!-- contenedor donde se pinta la data -->
       <div id="data-container">
         <!-- <div class="film-container"> en main.js-->
